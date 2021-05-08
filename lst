@@ -1,0 +1,66 @@
+lst1 = [4, None, 'foo'] + [7, 8, [2, 3]]
+print(lst1)
+print(lst1[5][1])
+x = [4, None, 'foo']
+x.extend([7, 8, (2, 3)])
+print(x)
+states = {
+    'Oregano': 'OR',
+    'Florida': 'FL',
+    'California': 'CA',
+    'New York': 'NY',
+    'Michigan': 'MI'
+}
+
+cities = {'CA' : 'San Francisco',
+          'MI' : 'Detroit',
+          'FL' : 'Jacksonville'}
+
+cities['NY'] = 'New York'
+cities['OR'] = 'Portland'
+
+print('-' * 10)
+print("NY State has: ", cities['NY'])
+print("OR State has: ", cities['OR'])
+
+print('-' * 10)
+print("Michigan's abbreviation is: ", states["Michigan"])
+print("Florida's abbreviation is: ", states['Florida'])
+
+print('-' * 10)
+for state, abbrev in states.items():
+    print(f"{state} is abbreviated {abbrev}")
+
+print('-' * 10)
+for abbrev, city in cities.items():
+    print(f"{abbrev} has the city {city}")
+
+print('-' * 10)
+for state, abbrev in states.items():
+    print(f"{state} state is abbreviated {abbrev}")
+    print(f"and has city {cities[abbrev]}")
+
+print('-' * 10)
+state = states.get('Texas')
+
+if not state:
+    print("Sorry, no Texas.")
+
+city = cities.get('FL','Does not Exist')
+print(f"The city for the state 'TX' is: {city}")
+
+print(states['California'])
+print(cities)
+cities['WDC'] = 'Washington DC'
+print(cities)
+print(states['Michigan'])
+
+for key, value in states.items():
+    print(f"key: {key}, value {abbrev}")
+
+for key, value in states.items():
+    print(f"value: {value}")
+
+    print(list(cities.keys())[list(cities.values()).index('New York')])
+
+print([list(cities.values()).index('New York')])
